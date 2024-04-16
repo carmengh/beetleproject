@@ -1,0 +1,190 @@
+body{
+    font-family: 'Caveat', sans-serif;
+    background-color: #EFF7ED;
+    margin: 0px;
+    padding: 0px;
+}
+
+.skip{
+    background: white;
+    left: 0px;
+    padding: 6px;
+    position: absolute;
+    top: -50px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+  
+.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+}
+
+.overview{
+    text-align: center;
+    background-color: rgb(109, 145, 109);
+    margin: 0px;
+    padding: 30px;
+    height: 30%;
+}
+
+#open{
+    position: relative;
+    font-size: 40px;
+    background-color: transparent;
+    left: 10px;
+    border: none;
+}
+#open:hover{
+    font-size: 50px;
+}
+
+#side-nav{
+    position: fixed;
+    z-index: 100;
+    width: 17%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3A5134;
+    margin: 0;
+    padding: 0;
+}
+
+.hide{
+    display: none !important;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+nav img {
+    margin:30px;
+}
+
+a:-webkit-any-link{
+    color:#EFF7ED;
+    text-decoration: none;
+    font-size: 30px;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:focus{
+    text-decoration: underline;
+}
+
+.close{
+    position: relative;
+    top: 0;
+    left: 35%;
+}
+
+footer{
+    text-align: center;
+    margin-top: 70px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Home styling */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img{
+    border: 2px solid rgb(1, 97, 1);
+    border-radius: 25px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+.fix:hover{
+    width:450px !important;
+}
+.new:hover{
+    width:350px !important;
+}
+
+.container p{
+    position: relative;
+    border: 2px solid rgb(1, 97, 1);
+    border-radius: 25px;
+    background-color: #EFF7ED;
+    padding: 25px;
+    right: 20px;
+    z-index: 0;
+    width: 300px;
+    height: 100px;
+}
+.container p:hover{
+    padding: 40px !important;
+}
+
+#bp{
+    left: 20px;
+}
+
+.set{
+    display: flex;
+    align-items: flex-end;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Beetles styling */
+.beet{
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Extra styling */
+
+.sort{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-style{
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    width: 10%;
+}
+.b-style:hover{
+    font-size: 50px;
+}
+
+.videos > *:not(.current,.right,.left){
+    display: none;
+}
+.right,.left{
+    opacity: .3;
+    width: 300px;
+    height: 200px;
+}
+
+.videos{
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    order:2;
+}
+.right{
+    order:4;
+}
+.current{
+    order:3;
+}
