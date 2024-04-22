@@ -80,13 +80,17 @@ nav img {
 a:-webkit-any-link{
     color:#EFF7ED;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
+    width: 100%;
 }
 a:hover{
     text-decoration: underline;
 }
 a:focus{
     text-decoration: underline;
+}
+.link-curr{
+    background-color: #1d291a;
 }
 
 .close{
@@ -112,46 +116,41 @@ footer{
 .container img{
     border: 2px solid rgb(1, 97, 1);
     border-radius: 25px;
-    margin-bottom: 30px;
     position: relative;
     z-index: 10;
-}
-.fix:hover{
-    width:450px !important;
-}
-.new:hover{
-    width:350px !important;
-}
-
-.container p{
-    position: relative;
-    border: 2px solid rgb(1, 97, 1);
-    border-radius: 25px;
-    background-color: #EFF7ED;
-    padding: 25px;
-    right: 20px;
-    z-index: 0;
-    width: 300px;
-    height: 100px;
-}
-.container p:hover{
-    padding: 40px !important;
 }
 
 #bp{
     left: 20px;
+    /* order: 3; */
 }
 
 .set{
     display: flex;
     align-items: flex-end;
+    
+}
+
+.extra-set{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.extra-set p{
+    margin-bottom: 50px;
+}
+.extra-set #bp{
+    order: 3;
 }
 
 /* ------------------------------------------------------------------------------- */
 /* Beetles styling */
 .beet{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 5%;
     display: flex;
     flex-direction: column;
@@ -242,6 +241,10 @@ footer{
 /* ------------------------------------------------------------------------------- */
 /* Breakpoints */
 @media screen and (min-width: 700px){
+    a:-webkit-any-link{
+        font-size: 30px;
+    }
+
     #side-nav{
         width: 25%;
     }
@@ -275,6 +278,10 @@ footer{
         width:420px;
         height:315px;
     }
+
+    .extra-set img{
+        width: 300px;
+    }
 }
 
 @media screen and (min-width: 1100px){
@@ -296,15 +303,25 @@ footer{
         width:350px !important;
     }
     .container p{
+        position: relative;
         border: 2px solid rgb(1, 97, 1);
         border-radius: 25px;
+        background-color: #EFF7ED;
         padding: 25px;
         right: 20px;
+        z-index: 0;
         width: 300px;
         height: 100px;
     }
     .container p:hover{
         padding: 40px !important;
+    }
+
+    .fix:hover{
+        width:450px !important;
+    }
+    .new:hover{
+        width:350px !important;
     }
     
     #bp{
