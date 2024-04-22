@@ -5,6 +5,10 @@ body{
     padding: 0px;
 }
 
+#main{
+    width: 100vw;
+}
+
 .skip{
     background: white;
     left: 0px;
@@ -30,15 +34,16 @@ body{
     height: 30%;
 }
 
-#open{
-    position: relative;
-    font-size: 40px;
-    background-color: transparent;
-    left: 10px;
-    border: none;
+
+.m-nav{
+    background-color: #3A5134;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
 }
-#open:hover{
-    font-size: 50px;
+.m-nav li{
+    list-style-type: none;
 }
 
 #side-nav{
@@ -51,6 +56,10 @@ body{
     background-color: #3A5134;
     margin: 0;
     padding: 0;
+}
+
+#open{
+    display: none;
 }
 
 .hide{
@@ -141,9 +150,36 @@ footer{
 /* ------------------------------------------------------------------------------- */
 /* Beetles styling */
 .beet{
-    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.beet h2{
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.beet p{
+    font-size: 18px;
+}
+.beet figure{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+.beet figure img{
+    align-self: center;
+}
+
+#style_beet{
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -158,20 +194,23 @@ footer{
 .b-style{
     border: none;
     background-color: transparent;
-    font-size: 30px;
+    font-size: 20px;
     width: 10%;
 }
 .b-style:hover{
-    font-size: 50px;
+    font-size: 30px;
+}
+
+#extra-format{
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .videos > *:not(.current,.right,.left){
     display: none;
 }
 .right,.left{
-    opacity: .3;
-    width: 300px;
-    height: 200px;
+    display: none;
 }
 
 .videos{
@@ -187,4 +226,143 @@ footer{
 }
 .current{
     order:3;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Pinning styling */
+#intro{
+    margin-top:50px;
+}
+#pinning-vid{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 40px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Breakpoints */
+@media screen and (min-width: 700px){
+    #side-nav{
+        width: 25%;
+    }
+
+    #open{
+        display: block;
+        position: relative;
+        font-size: 40px;
+        background-color: transparent;
+        left: 10px;
+        border: none;
+    }
+    #open:hover{
+        font-size: 50px;
+    }
+    .m-nav{
+        display: none;
+    }
+
+    #style_beet img{
+        width:300px;
+    }
+
+    #pinning-vid{
+        margin-top: 20px;
+        width:450px; 
+        height:350px;
+    }
+
+    .current{
+        width:420px;
+        height:315px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    #side-nav{
+        width: 17%;
+    }
+    .container img{
+        border: 2px solid rgb(1, 97, 1);
+        border-radius: 25px;
+        margin-bottom: 30px;
+    }
+    .set img{
+        width: 400px;
+    }
+    .fix:hover{
+        width:450px !important;
+    }
+    .new:hover{
+        width:350px !important;
+    }
+    .container p{
+        border: 2px solid rgb(1, 97, 1);
+        border-radius: 25px;
+        padding: 25px;
+        right: 20px;
+        width: 300px;
+        height: 100px;
+    }
+    .container p:hover{
+        padding: 40px !important;
+    }
+    
+    #bp{
+        left: 20px;
+    }
+
+    .beet{
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5%;
+    }
+    .beet h2{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+    .beet p{
+        font-size: 18px;
+    }
+    #style_beet{
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+        border: 2px solid rgb(1, 140, 1);
+        border-radius: 25px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 50px;
+    }
+
+    .b-style{
+        font-size: 30px;
+        width: 10%;
+    }
+    .b-style:hover{
+        font-size: 50px;
+    }
+    
+    #extra-format{
+        margin-bottom: 50px;
+    }
+    .right,.left{
+        display: block;
+        opacity: .3;
+        width: 300px;
+        height: 200px;
+    }
+    .current{
+        width:420px;
+        height:315px;
+    }
+
+    #intro{
+        margin-top:50px;
+    }
+    #pinning-vid{
+        margin-top: 40px;
+        width:600px; 
+        height:500px;
+    }
 }

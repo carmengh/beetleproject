@@ -6,6 +6,8 @@ bug.addEventListener("click", function(){
     bug.style.zIndex = "10";
     hp.style.zIndex = "0";
     console.log("image z: "+ bug.style.zIndex);
+    // hp.style.width = hp.style.width - 100 + "px";
+    // bug.style.width = bug.style.width + 100 + "px";
     hp.style.width = "300px";
     bug.style.width = "400px";
     hp.style.right = "20px";
@@ -17,6 +19,8 @@ hp.addEventListener("click", function(){
     hp.style.zIndex = "10";
     bug.style.zIndex = "0";
     console.log("p z: "+ hp.style.zIndex);
+    // hp.style.width = hp.style.width + 100 + "px";
+    // bug.style.width = bug.style.width - 100 + "px";
     hp.style.width = "400px";
     bug.style.width = "300px";
     hp.style.right = "150px";
